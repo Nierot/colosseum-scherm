@@ -19,3 +19,9 @@ make dev
 ```
 
 Of doe iets anders, het is plain js, je vogelt het maar uit
+
+## JavaScript
+
+Kijk, de reden dat we 10 jaar terug de tijd in springen, is omdat dit project bedoelt is voor _Safari_ op een iPad die sinds _2019_ al geen feature updates meer krijgt. Dat is een taaie bende, dus pas goed op wat je schrijft.
+
+Kijk voor de zekerheid altijd op [caniuse.com](https://caniuse.com/)
