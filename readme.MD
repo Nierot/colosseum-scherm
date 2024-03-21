@@ -1,6 +1,7 @@
 # Colosseum thuisscherm
 
 Zie leuke fototjes, beheer muziek, streep biertjes (?), en meer!
+
 Ontworpen om te draaien op een iPad mini 2 (iOS 12.5.5), daarom maak ik gebruik van jQuery en backbone enzo ipv Svelte
 
 ## Developen
