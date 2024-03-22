@@ -1,6 +1,7 @@
 var app = app || {}
 app.Views = {}
 
+
 const Router = Backbone.Router.extend({
   routes: {
     '': 'home',
@@ -12,14 +13,26 @@ const Router = Backbone.Router.extend({
     '*404': 'notFound'
   },
 
+  execute: function (callback, args, name) {
+    // Close the current view
+    if (app.Views.current) {
+      // app.Views.current.close()
+    }
+
+    Backbone.Router.prototype.execute.call(this, callback, args, name)
+  },
+
   home: function () {
     app.Views.Home = new HomeView()
+    app.Views.current = app.Views.Home
   },
 
   music: function () {
     app.Views.Music = new MusicView({
       collection: app.Playlists,
     })
+
+    app.Views.current = app.Views.Music
   },
 
   images: function () {
@@ -35,13 +48,16 @@ const Router = Backbone.Router.extend({
   },
 
   about: function () {
-    app.Views.About = new NotFoundView()
+    app.Views.About = new AboutView()
   },
 
   notFound: function () {
     app.Views.NotFound = new NotFoundView()
   }
 })
+
+// https://stackoverflow.com/questions/10987738/backbone-events-firing-twice
+// https://lostechies.com/derickbailey/2011/09/15/zombies-run-managing-page-transitions-in-backbone-apps/
 
 // Load navbar
 const navView = new NavView()
@@ -53,3 +69,11 @@ Backbone.history.start({
   // pushState: true,
   root: window.location.pathname
 })
+
+Backbone.View.prototype.close = function () {
+  this.remove();
+  this.unbind();
+  if (this.onClose) {
+    this.onClose();
+  }
+}

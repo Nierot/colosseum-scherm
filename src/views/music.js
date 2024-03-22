@@ -27,6 +27,11 @@ const MusicView = Backbone.View.extend({
     this.render()
   },
 
+  onClose: function () {
+    // Remove listeners
+    this.stopListening()
+  },
+
   pagination: function (event) {
     const page = parseInt(event.target.getAttribute('data-page'))
     this.setPage(page)
