@@ -14,11 +14,14 @@
   <link rel="stylesheet" href="/lib/reset.css">
   <!-- Bootstrap 5.3.3 -->
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+  <!-- Toasts -->
+  <link rel="stylesheet" href="/lib/jquery.toast.css">
   <link rel="stylesheet" href="style.css">
 
 
   <!-- Load dependencies -->
   <script src="/lib/jquery-3.7.1.js"></script>
+  <script src="/lib/jquery.toast.min.js"></script>
   <script src="/lib/underscore-umd.js"></script>
   <script src="/lib/backbone.js"></script>
   <script src="/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -124,15 +127,26 @@
     <div id="container">
       Laden...
     </div>
+
+
   </main>
 
   <!-- Scripts -->
   <script src="utils.js"></script>
   <script src="models.js"></script>
+
+  <!-- Models -->
+  <script src="/models/playlist.js"></script>
+  <!-- Collections -->
+  <script src="/collections/playlists.js"></script>
+
+  <!-- Views -->
   <script src="/views/nav.js"></script>
   <script src="/views/not-found.js"></script>
   <script src="/views/home.js"></script>
   <script src="/views/music.js"></script>
+
+  <!-- Router -->
   <script src="index.js"></script>
 </body>
 
