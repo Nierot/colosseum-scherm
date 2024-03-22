@@ -24,6 +24,12 @@ make dev
 
 Of doe iets anders, het is plain js, je vogelt het maar uit
 
+## Debuggen
+
+Als je als pauper geen MacOS draait (zoals ik), maakt Apple je het maar lastig om te debuggen.
+Gelukkig is er een held die [inspect](https://inspect.dev/) heeft gebouwd.
+Hiervoor moet je wel eerst even je computer "vertrouwen", en dat doe je door iTunes te installeren _(Apple devices werkte niet voor mij)_
+
 ## HTML Strings
 
 Als je VSCode gebruikt kan je syntax highlighting aanzetten voor HTML strings met de [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) plugin.
