@@ -4,6 +4,15 @@ const NavView = Backbone.View.extend({
     'click a': 'onClick'
   },
 
+  initialize: function () {
+    const route = window.location.hash
+
+    if (route) {
+      // Set the active class on the correct nav item
+      this.setRoute(route.replace('#', '/'))
+    }
+  },
+
   setRoute(route) {
     // Remove the active class from all nav items
     this.$('a').removeClass('active')
