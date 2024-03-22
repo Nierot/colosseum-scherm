@@ -1,6 +1,10 @@
-function navigate(to) {
-  Backbone.history.navigate(to, { trigger: true })
+class Utils {
+  static date(date) {
+    // Date is in format 'YYYY-MM-DD HH:MM:SS.000Z'
+    // Return 'DD-MM-YYYY'
 
-  // Get the navbar and set the active class
-  const nav = document.getElementById('nav')
+    const [year, month, day] = date.split(' ')[0].split('-')
+
+    return `${day}-${month}-${year}`
+  }
 }
