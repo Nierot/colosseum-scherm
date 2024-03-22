@@ -14,7 +14,11 @@ const Router = Backbone.Router.extend({
   },
 
   music: function () {
-    const view = new MusicView()
+    console.log('music', app)
+
+    const view = new MusicView({
+      collection: app.Playlists,
+    })
   },
 
   images: function () {
