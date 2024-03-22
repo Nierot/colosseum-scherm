@@ -4,7 +4,8 @@ const MusicView = Backbone.View.extend({
   el: '#container',
 
   events: {
-    'click button': 'play'
+    'click button': 'play',
+    'click a.page-link': 'pagination'
   },
 
   initialize: function () {
@@ -26,15 +27,10 @@ const MusicView = Backbone.View.extend({
     this.render()
   },
 
-  paginationListeners: function () {
-    let self = this
-
-    // Setup listeners for the pagination
-    $('a.page-link').on('click', function (event) {
-      const page = parseInt(event.target.getAttribute('data-page'))
-      self.setPage(page)
-      self.render()
-    })
+  pagination: function (event) {
+    const page = parseInt(event.target.getAttribute('data-page'))
+    this.setPage(page)
+    this.render()
   },
 
   setPage: function (page) {
@@ -119,8 +115,6 @@ const MusicView = Backbone.View.extend({
       page: 0
     }))
 
-    // Add pagination listeners
-    this.paginationListeners()
     return this
   }
 })

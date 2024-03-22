@@ -27,8 +27,6 @@ var app = app || {};
       }
 
       // Set the playlist as the currently playing playlist
-
-      console.log(playlist)
       playlist.set('IsCurrentlyPlaying', true)
       const d = new Date()
 

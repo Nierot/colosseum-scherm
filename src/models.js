@@ -9,7 +9,7 @@ Backbone.sync = function (method, model, options) {
     url: API_ROOT + _.result(model, 'url')
   })
 
-  console.log('Syncing', method, model, options)
+  // console.log('Syncing', method, model, options)
 
   oldSync(method, model, options)
 }

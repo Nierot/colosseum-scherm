@@ -1,3 +1,6 @@
+var app = app || {}
+app.Views = {}
+
 const Router = Backbone.Router.extend({
   routes: {
     '': 'home',
@@ -10,35 +13,33 @@ const Router = Backbone.Router.extend({
   },
 
   home: function () {
-    const view = new HomeView()
+    app.Views.Home = new HomeView()
   },
 
   music: function () {
-    console.log('music', app)
-
-    const view = new MusicView({
+    app.Views.Music = new MusicView({
       collection: app.Playlists,
     })
   },
 
   images: function () {
-    const view = new NotFoundView()
+    app.Views.Images = new NotFoundView()
   },
 
   tally: function () {
-    const view = new NotFoundView()
+    app.Views.Tally = new NotFoundView()
   },
 
   settings: function () {
-    const view = new NotFoundView()
+    app.Views.Settings = new NotFoundView()
   },
 
   about: function () {
-    const view = new NotFoundView()
+    app.Views.About = new NotFoundView()
   },
 
   notFound: function () {
-    const view = new NotFoundView()
+    app.Views.NotFound = new NotFoundView()
   }
 })
 
