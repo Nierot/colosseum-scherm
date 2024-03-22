@@ -1,5 +1,7 @@
 # Rotonde
 
+> Ze denken dat ik aso ben, jonge, ik ben der mee begonnen.
+
 Leuk schermpje dat hangt in het colosseum
 
 Zie leuke fototjes, beheer muziek, streep biertjes (?), en meer!
