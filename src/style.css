@@ -32,6 +32,11 @@ svg {
 	pointer-events: none;
 }
 
+.jq-toast-wrap {
+	position: fixed;
+	z-index: 100;
+}
+
 #view--not-found {
 	width: 100%;
 	display: flex;
@@ -39,4 +44,23 @@ svg {
 	justify-content: center;
 	align-items: center;
 	height: 100%;
+}
+
+#view--music {
+	height: 100%;
+
+	display: grid;
+	grid-template-rows: min-content max-content auto min-content;
+
+	height: 100%;
+}
+
+#view--music > .navigation-bar {
+	padding-bottom: 1rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	max-width: 100%;
 }
