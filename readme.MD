@@ -10,10 +10,10 @@ Ontworpen om te draaien op een iPad mini 2 (iOS 12.5.5), daarom maak ik gebruik 
 
 ## Developen
 
-Installeer http-server
+Installeer live-server
 
 ```console
-npm i -g http-server
+npm i -g live-server
 ```
 
 Draai een development server met:
@@ -23,6 +23,20 @@ make dev
 ```
 
 Of doe iets anders, het is plain js, je vogelt het maar uit
+
+## HTML Strings
+
+Als je VSCode gebruikt kan je syntax highlighting aanzetten voor HTML strings met de [es6-string-html](https://marketplace.visualstudio.com/items?itemName=Tobermory.es6-string-html) plugin.
+
+Gebruik hem door html te commenten voor je string
+
+```js
+  template: _.template(/*html*/`
+    <div id="view--home">
+      <h1>Welkom bij Rotonde</h1>
+    </div>
+  `),
+```
 
 ## JavaScript
 

@@ -4,7 +4,7 @@ const HomeView = Backbone.View.extend({
     this.render()
   },
 
-  template: _.template(`
+  template: _.template(/*html*/`
     <div id="view--home">
 
       <h1>Welkom bij Rotonde</h1>
