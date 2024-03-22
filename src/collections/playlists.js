@@ -38,6 +38,13 @@ var app = app || {};
 
       // Persist on the server
       playlist.save()
+
+      $.toast({
+        heading: playlist.get('Name'),
+        text: 'Wordt in de queue gegooid.',
+        icon: 'info',
+        position: 'top-right'
+      })
     }
   })
 
