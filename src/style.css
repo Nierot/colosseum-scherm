@@ -1,0 +1,42 @@
+main {
+	display: flex;
+	flex-wrap: nowrap;
+	height: 100vh;
+	max-height: 100vh;
+	width: 100vw;
+	max-width: 100vw;
+	overflow: hidden;
+	position: fixed;
+}
+
+/* This element takes up the entire screen, except for the navbar */
+#container {
+	flex: 1;
+	height: 100vh;
+	max-height: 100vh;
+	width: 100%;
+	max-width: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+
+	padding: 1rem;
+}
+
+#nav-info {
+	padding-bottom: 2rem;
+}
+
+img,
+svg {
+	/* Dit is nodig zodat backbone geen click event triggert op een <a> */
+	pointer-events: none;
+}
+
+#view--not-found {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
