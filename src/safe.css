@@ -1,0 +1,7 @@
+.safemode #view--home-quote {
+  visibility: hidden;
+}
+
+.safemode #about-info-button svg {
+  color: #ff0f0f;
+}

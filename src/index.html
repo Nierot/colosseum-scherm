@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
   <!-- Toasts -->
   <link rel="stylesheet" href="/lib/jquery.toast.css">
+  <link rel="stylesheet" href="safe.css">
   <link rel="stylesheet" href="style.css">
 
 
@@ -54,6 +55,10 @@
     <symbol id="ph--house" viewBox="0 0 256 256">
       <path fill="currentColor"
         d="m218.83 103.77l-80-75.48a1.14 1.14 0 0 1-.11-.11a16 16 0 0 0-21.53 0l-.11.11l-79.91 75.48A16 16 0 0 0 32 115.55V208a16 16 0 0 0 16 16h48a16 16 0 0 0 16-16v-48h32v48a16 16 0 0 0 16 16h48a16 16 0 0 0 16-16v-92.45a16 16 0 0 0-5.17-11.78M208 208h-48v-48a16 16 0 0 0-16-16h-32a16 16 0 0 0-16 16v48H48v-92.45l.11-.1L128 40l79.9 75.43l.11.1Z" />
+    </symbol>
+    <symbol id="ph--alien" viewBox="0 0 256 256">
+      <path fill="currentColor"
+        d="M128 16a96.11 96.11 0 0 0-96 96c0 24 12.56 55.06 33.61 83c21.18 28.15 44.5 45 62.39 45s41.21-16.81 62.39-45c21.05-28 33.61-59 33.61-83a96.11 96.11 0 0 0-96-96m49.61 169.42C160.24 208.49 140.31 224 128 224s-32.24-15.51-49.61-38.58C59.65 160.5 48 132.37 48 112a80 80 0 0 1 160 0c0 20.37-11.65 48.5-30.39 73.42M120 136a40 40 0 0 0-40-40a16 16 0 0 0-16 16a40 40 0 0 0 40 40a16 16 0 0 0 16-16m-40-24a24 24 0 0 1 24 24a24 24 0 0 1-24-24m96-16a40 40 0 0 0-40 40a16 16 0 0 0 16 16a40 40 0 0 0 40-40a16 16 0 0 0-16-16m-24 40a24 24 0 0 1 24-24a24 24 0 0 1-24 24m0 48a8 8 0 0 1-8 8h-32a8 8 0 0 1 0-16h32a8 8 0 0 1 8 8" />
     </symbol>
   </svg>
 
@@ -112,8 +117,16 @@
             </svg>
           </a>
         </li>
+        <li>
+          <a href="/toggle" class="nav-link py-3 border-bottom" title="Toggle" data-bs-toggle="tooltip"
+            data-bs-placement="right">
+            <svg class="bi" width="24" height="24" role="img" aria-label="Toggle">
+              <use xlink:href="#ph--alien" />
+            </svg>
+          </a>
+        </li>
       </ul>
-      <div class="dropdown border-top">
+      <div class="dropdown border-top" id="about-info-button">
         <a href="/about"
           class="d-flex align-items-center justify-content-center px-3 pt-3 link-dark text-decoration-none"
           id="nav-info">

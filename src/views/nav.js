@@ -29,6 +29,11 @@ const NavView = Backbone.View.extend({
     e.preventDefault()
     const path = e.target.pathname
 
+    if (path === '/toggle') {
+      $('html').toggleClass('safemode')
+      return
+    }
+
     this.setRoute(path)
     router.navigate(path, { trigger: true })
   }
