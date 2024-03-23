@@ -3,6 +3,26 @@ const HomeView = Backbone.View.extend({
   initialize: function () {
     this.render()
   },
+  /**
+    Hier een carousel met de volgende onderdelen:
+      Het huidige weer groot (buienradar widget)
+      Een quote (alleen als geen .safemode is)
+      Een mooi plaatje van IBS
+      De opkomende activiteiten
+      Het huidig spelende nummer (alleen als het een nieuwe is) (weet nog niet of deze erin komt)
+
+
+    Als je op het weer klikt dan laat hij de buienradar widget voor een minuut zien
+    Als je op het nummer klikt laat hij de album cover zien
+
+    Het weer:
+      Mooi icoontje van het weer
+      Temperatuur
+      Gevoelstemperatuur
+      Weertype
+      Kans op regen
+      Luchtvochtigheid?
+   */
 
   template: _.template(/*html*/`
     <div id="view--home">
@@ -12,18 +32,6 @@ const HomeView = Backbone.View.extend({
       </div>
 
       <div id="view--home-picture"><img src="https://picsum.photos/1700/1080" alt="Random image from picsum.photos" /></div>
-
-      <!--
-        Hier een carousel met de volgende onderdelen:
-          Het huidige weer groot (buienradar widget)
-          Een quote (alleen als geen .safemode is)
-          Een mooi plaatje van IBS
-          De opkomende activiteiten
-          Het huidig spelende nummer (alleen als het een nieuwe is) (weet nog niet of deze erin komt)
-
-          Als je op het weer klikt dan laat hij de buienradar widget voor een minuut zien
-          Als je op het nummer klikt laat hij de album cover zien
-      -->
 
       <div id="view--home-bottom">
         <div id="view--home-weather">
