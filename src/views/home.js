@@ -1,8 +1,27 @@
+var app = app || {}
+
 const HomeView = Backbone.View.extend({
   el: '#container',
+
+  events: {
+    'click': 'click'
+  },
+
   initialize: function () {
+    this.collection = app.Collections.Home
+    this.listenTo(this.collection, 'all', function (event) {
+      if (event === 'sync' || event === 'change') {
+        this.render()
+      }
+    })
+
+    this.collection.fetch()
+
+    console.log('HomeView::initialize', this.collection)
+
     this.render()
   },
+
   /**
     Hier een carousel met de volgende onderdelen:
       Het huidige weer groot (buienradar widget)
@@ -36,13 +55,19 @@ const HomeView = Backbone.View.extend({
       <div id="view--home-bottom">
         <div id="view--home-weather">
           <div id="view--home-weather-icon">
-            Kutweer icoontje
+          <svg class="bi" width="48" height="48" role="img" aria-label="Muziek">
+            <use xlink:href="#ph--cloud-rain" />
+          </svg>
           </div>
           <div id="view--home-weather-info">
-            <span>5°C</span>
-            <span>Voelt als 2°C</span>
-            <span>Regen</span>
-            <span>82% kans op regen</span>
+            <div>
+              <p>5°C</p>
+              <p>Voelt als 2°C</p>
+            </div>
+            <div>
+              <p>Regen</p>
+              <p>82% kans op regen</p>
+            </div>
           </div>
         </div>
         <div id="view--home-song">
@@ -59,6 +84,8 @@ const HomeView = Backbone.View.extend({
   `),
 
   render: function () {
+    console.log(this.collection)
+
     this.$el.html(this.template())
     return this
   }

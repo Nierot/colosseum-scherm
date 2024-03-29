@@ -1,4 +1,4 @@
-const API_ROOT = 'http://192.168.178.21:8000/'
+const API_ROOT = 'http://192.168.178.105:8000/'
 
 /**
  * Override Backbone.sync to use the correct API URL for all requests
@@ -22,12 +22,12 @@ $(document).on('ajaxError', function (event, xhr, settings, thrownError) {
 
   let msg
 
-  if (xhr.responseJSON) {
-    msg = xhr.resJson.Message
+  if (resJson) {
+    msg = resJson.Message
   } else if (xhr.statusText === 'timeout') {
     msg = 'Kan niet verbinden met externe server.'
   } else {
-    msg = 'Er is een fout opgetreden bij het ophalen van gegevens.'
+    msg = 'Onbekende fout: ' + xhr.statusText
   }
 
   $.toast({

@@ -108,15 +108,17 @@ const MusicView = Backbone.View.extend({
   `),
 
   render: function () {
-    if (app.Playlists.models.length === 0) {
+    this.collection = app.Collections.Playlists
+
+    if (this.collection.models.length === 0) {
       return this.$el.html(`
         <div class="spinner-border text-primary" role="status"></div>`)
     }
 
-    this.maxPage = Math.ceil(app.Playlists.models.length / 8)
+    this.maxPage = Math.ceil(this.collection.models.length / 8)
 
     this.$el.html(this.template({
-      models: app.Playlists.models,
+      models: this.collection.models,
       page: 0
     }))
 

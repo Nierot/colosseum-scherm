@@ -3,13 +3,9 @@
 var app = app || {}
 app.Models = app.Models || {}
 
-app.Models.Playlist = Backbone.Model.extend({
+app.Models.Home = Backbone.Model.extend({
   idAttribute: 'ID',
   defaults: {
     ID: '',
-    Name: '',
-    LastPlayed: new Date(0),
-    CreatedAt: new Date(0),
-    UpdatedAt: new Date(0)
   }
 })

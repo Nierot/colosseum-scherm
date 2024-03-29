@@ -23,13 +23,15 @@ const Router = Backbone.Router.extend({
   },
 
   home: function () {
-    app.Views.Home = new HomeView()
+    app.Views.Home = new HomeView({
+      collection: app.Collections.Home,
+    })
     app.Views.current = app.Views.Home
   },
 
   music: function () {
     app.Views.Music = new MusicView({
-      collection: app.Playlists,
+      collection: app.Collections.Playlists,
     })
 
     app.Views.current = app.Views.Music
@@ -61,7 +63,6 @@ const Router = Backbone.Router.extend({
 
 // Load navbar
 const navView = new NavView()
-const homeView = new HomeView()
 
 // Finally, create a new instance of the router
 const router = new Router({})

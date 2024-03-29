@@ -1,10 +1,11 @@
 // https://github.com/tastejs/todomvc/blob/master/examples/backbone/src/collections/todos.js
 
 var app = app || {};
+app.Collections = app.Collections || {};
 
 (function () {
   const Playlists = Backbone.Collection.extend({
-    model: app.Playlist,
+    model: app.Models.Playlist,
     url: 'playlist',
     parse: function (data) {
       return data.Data
@@ -46,5 +47,5 @@ var app = app || {};
     }
   })
 
-  app.Playlists = new Playlists()
+  app.Collections.Playlists = new Playlists()
 })()

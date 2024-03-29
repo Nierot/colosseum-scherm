@@ -39,19 +39,23 @@ svg {
 
 #view--home {
 	width: 100%;
+	max-width: 100%;
 	height: 100%;
+	max-height: 100%;
 	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: min-content 1fr 100px;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: min-content 80% 100px;
 
 	overflow-y: hidden;
 }
 
 #view--home-title {
+	grid-column: 1/-1;
 	text-align: end;
 }
 
 #view--home-picture {
+	grid-column: 1/-1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -67,6 +71,8 @@ svg {
 }
 
 #view--home-bottom {
+	grid-column: 1/-1;
+	padding-bottom: 0.75rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
@@ -88,6 +94,36 @@ svg {
 	flex-direction: column;
 	justify-content: center;
 	align-items: flex-end;
+}
+
+#view--home-weather {
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+#view--home-weather-info {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+#view--home-weather-info > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+
+	padding-left: 1rem;
+	margin-left: 1rem;
+	border-left: 2px solid black;
+}
+
+#view--home-weather-info > div > p {
+	margin: 0;
+	padding: 0;
 }
 
 #view--home-quote {
@@ -130,5 +166,3 @@ svg {
 #view--about {
 	height: 100%;
 }
-
-
